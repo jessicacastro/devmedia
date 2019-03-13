@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Transitional/EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>FAJSF - Editar Lembrete</title>
+    </h:head>
+
+    <h:body>
+        <h1>Edição de Lembretes</h1>
+
+        <h2>Editando lembrete: "<h:outputText value="#{lembreteBean.lembrete.titulo}"/>"</h2>
+
+        <h:messages />
+
+        <f:metadata>
+            <f:viewParam name="lembrete" value="#{lembreteBean.lembrete.id}" />
+            <f:event type="preRenderComponent" listener="#{lembreteBean.lembretePorId}" />
+        </f:metadata>
+
+        <h:form rendered="#{lembreteBean.lembrete.id != 0}">
+            <h:panelGrid columns="3">
+                <h:outputLabel value="Título:" />
+                <h:inputText id="titulo" value="#{lembreteBean.lembrete.titulo}" required="true">
+                    <f:validateLength minimum="3" maximum="255" />
+                </h:inputText>
+                <h:message for="titulo" />
+
+                <h:outputLabel value="Descrição:" />
+                <h:inputText id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true">
+                    <f:validateLength minimum="3" maximum="255" />
+                </h:inputText>
+                <h:message for="descricao" />
+
+                <h:outputLabel value="Início:" />
+                <h:inputText id="data-inicio" value="#{lembreteBean.lembrete.dataInicio}" required="true">
+                    <f:validateLength minimum="3" maximum="255" />
+                </h:inputText>
+                <h:message for="data-inicio" />
+            </h:panelGrid>
+
+            <h:commandButton value="Enviar" action="#{lembreteBean.editar}" />
+        </h:form>
+
+        <h:link value="Voltar" outcome="home" />
+    </h:body>
+</html>

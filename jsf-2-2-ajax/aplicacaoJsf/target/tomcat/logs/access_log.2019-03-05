@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:21:51 -0300] "GET /lembretes HTTP/1.1" 302 - http-bio-9090-exec-1 0
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:21:52 -0300] "GET /lembretes/ HTTP/1.1" 200 968 http-bio-9090-exec-3 1134
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:21:52 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-4 0
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:15 -0300] "GET /lembretes/adicionar.xhtml;jsessionid=AF822C6AC9C53557E526618247C94DAD HTTP/1.1" 200 1156 http-bio-9090-exec-5 303
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:28 -0300] "POST /lembretes/adicionar.xhtml HTTP/1.1" 302 - http-bio-9090-exec-7 36
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:28 -0300] "GET /lembretes/index.xhtml HTTP/1.1" 200 1188 http-bio-9090-exec-9 12
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:32 -0300] "GET /lembretes/remover.xhtml?lembrete=2 HTTP/1.1" 200 812 http-bio-9090-exec-10 64
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:36 -0300] "POST /lembretes/remover.xhtml HTTP/1.1" 302 - http-bio-9090-exec-10 4
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:36 -0300] "GET /lembretes/index.xhtml HTTP/1.1" 200 908 http-bio-9090-exec-10 8
+0:0:0:0:0:0:0:1 - - [05/Mar/2019:12:22:40 -0300] "GET /lembretes/editar.xhtml?lembrete=1 HTTP/1.1" 500 3802 http-bio-9090-exec-10 36
